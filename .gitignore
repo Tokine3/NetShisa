@@ -1,0 +1,18 @@
+# Xcode
+xcuserdata/
+*.xcscmblueprint
+*.xccheckout
+project.xcworkspace/xcuserdata/
+
+# Build
+build/
+DerivedData/
+
+# macOS
+.DS_Store
+*.swp
+*~
+
+# Dependencies
+Packages/
+.build/

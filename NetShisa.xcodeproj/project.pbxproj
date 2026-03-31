@@ -1,0 +1,515 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0182309E41AE408D646F06C1 /* ProbeScheduler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DB3D17A83CFDDCCE6D12F4B /* ProbeScheduler.swift */; };
+		097D2CCF2E1A00F5B5E68E29 /* NetShisaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8698D206EFBAE116022F3BA5 /* NetShisaApp.swift */; };
+		1C544BE6770E036A149EBE78 /* WiFiView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E0CCDD790C568408075DAC /* WiFiView.swift */; };
+		1C5BC151CD1F47D80C89300C /* ServiceProbe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 979B62540376B1AA0A7B52B5 /* ServiceProbe.swift */; };
+		216A166FE1EEB608743A9D7D /* DualStackMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EC8C3CE6FD108ACF6279496 /* DualStackMonitor.swift */; };
+		2A99E9DA7B6E9BA58525B75E /* Incident.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E51A6BEFBF9C6369B5A25FA /* Incident.swift */; };
+		2FD1E6B42D642FAF54DCD00A /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65780D04C07A747968BDC014 /* SettingsView.swift */; };
+		31CD87CCD79D7E1A79063BBD /* DNSResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC1B6B16441936E103A800E /* DNSResult.swift */; };
+		36D9C03D15E1FA0B597E2076 /* NetworkDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E353D453E8BDA390D01695C /* NetworkDetailView.swift */; };
+		433505B17267C6266A9F9C2B /* TimelineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE9F28992952182921B4230 /* TimelineView.swift */; };
+		459E2668DBBED6ECDD8D1672 /* NetworkDetailProbe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41D7C5EB95B768C334079665 /* NetworkDetailProbe.swift */; };
+		52CB118ECE7574AC0F449D6F /* DNSProbe.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3548CA732DE78BE328BEF25 /* DNSProbe.swift */; };
+		5881C18E40C60870ECD35CD7 /* ConnectivitySnapshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A917707E7EC7C4D7FD04929 /* ConnectivitySnapshot.swift */; };
+		61D1F217EACE0C1CCAAA0E1C /* GatewayProbe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19552EF45FF146DED32205BF /* GatewayProbe.swift */; };
+		6E5B99415C1AA1D6C85ABCE9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1DE770DFC4D6D7A2438FDC40 /* Assets.xcassets */; };
+		70079CCF25E303E00C937AE6 /* WiFiProbe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27F93E15960AB2E47B91D108 /* WiFiProbe.swift */; };
+		779E5AF6ECD50CB3F0C721C8 /* DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B84AFFAB9F17FF33B9AAD6A /* DashboardView.swift */; };
+		78530C45846357BB12CD31EB /* ConnectivityState.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0F959426632A55919C55277 /* ConnectivityState.swift */; };
+		78DE965C78E6EE7C47529DDC /* RemediationEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBAF0FE0EB6B4AE745EB49C2 /* RemediationEngine.swift */; };
+		7BDCA2C5A942CEB06C6D51DC /* ServiceResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = B19083D013188F19BE1EC214 /* ServiceResult.swift */; };
+		7CEFF6DB113175FC27543D7C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9708E0783414240BF87169D /* AppDelegate.swift */; };
+		82072987455248A8789A08EC /* IncidentListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C06F320D784905616AF19FFC /* IncidentListView.swift */; };
+		993359F8FA99C56315CF9EDE /* StatusBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C6F36D6D9A343CE0A2113D /* StatusBarController.swift */; };
+		9DC72E9C4D4429CAE841786B /* ServiceRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1FAC19A8BFD49C0F0A614F3 /* ServiceRow.swift */; };
+		AAF7CD26B98400EE9E37ADB3 /* IncidentDetector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 595A432D0CE8812517701075 /* IncidentDetector.swift */; };
+		AC5F848274DAFA03E159E74E /* ICMPView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0A75FC5371C4CA536F3ED51 /* ICMPView.swift */; };
+		C1653CE353BC2415E9099430 /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89062207B052FFB8C28F27A4 /* NotificationManager.swift */; };
+		C8CD4B026F689DAE690F5B29 /* PopoverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9FA44AE41C5C71FFCB40739 /* PopoverView.swift */; };
+		CDA61C82991B836F146EC7DB /* DNSDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE1E7F1CF8FF57959D27B6FB /* DNSDetailView.swift */; };
+		DEB22EDA582C12A5490E8058 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = D570ADFA4A09506FF328727F /* AppState.swift */; };
+		DFD257F82C325D3C6233A672 /* ServiceDefinition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BE5E2D3F7D9C5599D681387 /* ServiceDefinition.swift */; };
+		E45F07786DF10E8E0EC6E77B /* StatusIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E7AF4F2ECA1731E96EF79B8 /* StatusIndicator.swift */; };
+		E92B91E65CC1241E55680163 /* DetailWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 438271C6BB7F925922BC64A2 /* DetailWindow.swift */; };
+		EBF6FA089DF9EE21AC5CD27A /* TracerouteEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D0F446A49062ED730DA36F /* TracerouteEngine.swift */; };
+		FDEB3C9C0C90823439A465C2 /* TracerouteResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = A09B2946AFFD082B59DB406C /* TracerouteResult.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		0BE5E2D3F7D9C5599D681387 /* ServiceDefinition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceDefinition.swift; sourceTree = "<group>"; };
+		0E353D453E8BDA390D01695C /* NetworkDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkDetailView.swift; sourceTree = "<group>"; };
+		1685550C0019081037126C5D /* NetShisa.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NetShisa.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		19552EF45FF146DED32205BF /* GatewayProbe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GatewayProbe.swift; sourceTree = "<group>"; };
+		1DE770DFC4D6D7A2438FDC40 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		27F93E15960AB2E47B91D108 /* WiFiProbe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WiFiProbe.swift; sourceTree = "<group>"; };
+		2E7AF4F2ECA1731E96EF79B8 /* StatusIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusIndicator.swift; sourceTree = "<group>"; };
+		3BE9F28992952182921B4230 /* TimelineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelineView.swift; sourceTree = "<group>"; };
+		41D7C5EB95B768C334079665 /* NetworkDetailProbe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkDetailProbe.swift; sourceTree = "<group>"; };
+		438271C6BB7F925922BC64A2 /* DetailWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailWindow.swift; sourceTree = "<group>"; };
+		4A917707E7EC7C4D7FD04929 /* ConnectivitySnapshot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectivitySnapshot.swift; sourceTree = "<group>"; };
+		50E0CCDD790C568408075DAC /* WiFiView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WiFiView.swift; sourceTree = "<group>"; };
+		55C6F36D6D9A343CE0A2113D /* StatusBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusBarController.swift; sourceTree = "<group>"; };
+		595A432D0CE8812517701075 /* IncidentDetector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IncidentDetector.swift; sourceTree = "<group>"; };
+		65780D04C07A747968BDC014 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		6DB3D17A83CFDDCCE6D12F4B /* ProbeScheduler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProbeScheduler.swift; sourceTree = "<group>"; };
+		6E51A6BEFBF9C6369B5A25FA /* Incident.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Incident.swift; sourceTree = "<group>"; };
+		8698D206EFBAE116022F3BA5 /* NetShisaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetShisaApp.swift; sourceTree = "<group>"; };
+		89062207B052FFB8C28F27A4 /* NotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
+		8B84AFFAB9F17FF33B9AAD6A /* DashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardView.swift; sourceTree = "<group>"; };
+		979B62540376B1AA0A7B52B5 /* ServiceProbe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceProbe.swift; sourceTree = "<group>"; };
+		9EC8C3CE6FD108ACF6279496 /* DualStackMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DualStackMonitor.swift; sourceTree = "<group>"; };
+		A09B2946AFFD082B59DB406C /* TracerouteResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TracerouteResult.swift; sourceTree = "<group>"; };
+		A9FA44AE41C5C71FFCB40739 /* PopoverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopoverView.swift; sourceTree = "<group>"; };
+		AAB25F13E248646544AF3EA9 /* NetShisa.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = NetShisa.entitlements; sourceTree = "<group>"; };
+		B0F959426632A55919C55277 /* ConnectivityState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectivityState.swift; sourceTree = "<group>"; };
+		B19083D013188F19BE1EC214 /* ServiceResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceResult.swift; sourceTree = "<group>"; };
+		B6D0F446A49062ED730DA36F /* TracerouteEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TracerouteEngine.swift; sourceTree = "<group>"; };
+		B9708E0783414240BF87169D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		C06F320D784905616AF19FFC /* IncidentListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IncidentListView.swift; sourceTree = "<group>"; };
+		C1FAC19A8BFD49C0F0A614F3 /* ServiceRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceRow.swift; sourceTree = "<group>"; };
+		CBC1B6B16441936E103A800E /* DNSResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DNSResult.swift; sourceTree = "<group>"; };
+		D051461708A85AC044A4EDD2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		D570ADFA4A09506FF328727F /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
+		E0A75FC5371C4CA536F3ED51 /* ICMPView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ICMPView.swift; sourceTree = "<group>"; };
+		F3548CA732DE78BE328BEF25 /* DNSProbe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DNSProbe.swift; sourceTree = "<group>"; };
+		FBAF0FE0EB6B4AE745EB49C2 /* RemediationEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemediationEngine.swift; sourceTree = "<group>"; };
+		FE1E7F1CF8FF57959D27B6FB /* DNSDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DNSDetailView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		1B5E361BFB7CE7732E057AF1 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				4A917707E7EC7C4D7FD04929 /* ConnectivitySnapshot.swift */,
+				B0F959426632A55919C55277 /* ConnectivityState.swift */,
+				CBC1B6B16441936E103A800E /* DNSResult.swift */,
+				6E51A6BEFBF9C6369B5A25FA /* Incident.swift */,
+				0BE5E2D3F7D9C5599D681387 /* ServiceDefinition.swift */,
+				B19083D013188F19BE1EC214 /* ServiceResult.swift */,
+				A09B2946AFFD082B59DB406C /* TracerouteResult.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		31DAC83ED5ABFD83BA48A95E /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				1DE770DFC4D6D7A2438FDC40 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		39D2F4BDF7D79EE37B827FF2 /* Notifications */ = {
+			isa = PBXGroup;
+			children = (
+				89062207B052FFB8C28F27A4 /* NotificationManager.swift */,
+			);
+			path = Notifications;
+			sourceTree = "<group>";
+		};
+		4C53F0A7DD75A58C3F1EE400 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				C1FAC19A8BFD49C0F0A614F3 /* ServiceRow.swift */,
+				2E7AF4F2ECA1731E96EF79B8 /* StatusIndicator.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		6F61F39FBE00BD65FCB1F94F /* NetShisa */ = {
+			isa = PBXGroup;
+			children = (
+				D051461708A85AC044A4EDD2 /* Info.plist */,
+				AAB25F13E248646544AF3EA9 /* NetShisa.entitlements */,
+				846621DBC157513991CFD7D3 /* App */,
+				CE66DB7216DD211999825E45 /* Diagnostics */,
+				91A097C28628135480F8740E /* MenuBar */,
+				1B5E361BFB7CE7732E057AF1 /* Models */,
+				39D2F4BDF7D79EE37B827FF2 /* Notifications */,
+				F39D93B169A3359AC7140811 /* Remediation */,
+				31DAC83ED5ABFD83BA48A95E /* Resources */,
+				D01615511555C1BA835F7CFC /* Scheduling */,
+				E823ACB54E62E5AE7FA70897 /* Views */,
+			);
+			path = NetShisa;
+			sourceTree = "<group>";
+		};
+		846621DBC157513991CFD7D3 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				B9708E0783414240BF87169D /* AppDelegate.swift */,
+				D570ADFA4A09506FF328727F /* AppState.swift */,
+				8698D206EFBAE116022F3BA5 /* NetShisaApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		91A097C28628135480F8740E /* MenuBar */ = {
+			isa = PBXGroup;
+			children = (
+				A9FA44AE41C5C71FFCB40739 /* PopoverView.swift */,
+				55C6F36D6D9A343CE0A2113D /* StatusBarController.swift */,
+			);
+			path = MenuBar;
+			sourceTree = "<group>";
+		};
+		B9C2750750EEDA46654164D4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1685550C0019081037126C5D /* NetShisa.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CE66DB7216DD211999825E45 /* Diagnostics */ = {
+			isa = PBXGroup;
+			children = (
+				F3548CA732DE78BE328BEF25 /* DNSProbe.swift */,
+				9EC8C3CE6FD108ACF6279496 /* DualStackMonitor.swift */,
+				19552EF45FF146DED32205BF /* GatewayProbe.swift */,
+				595A432D0CE8812517701075 /* IncidentDetector.swift */,
+				41D7C5EB95B768C334079665 /* NetworkDetailProbe.swift */,
+				979B62540376B1AA0A7B52B5 /* ServiceProbe.swift */,
+				B6D0F446A49062ED730DA36F /* TracerouteEngine.swift */,
+				27F93E15960AB2E47B91D108 /* WiFiProbe.swift */,
+			);
+			path = Diagnostics;
+			sourceTree = "<group>";
+		};
+		D01615511555C1BA835F7CFC /* Scheduling */ = {
+			isa = PBXGroup;
+			children = (
+				6DB3D17A83CFDDCCE6D12F4B /* ProbeScheduler.swift */,
+			);
+			path = Scheduling;
+			sourceTree = "<group>";
+		};
+		D366A8376E38961CB8F11712 = {
+			isa = PBXGroup;
+			children = (
+				6F61F39FBE00BD65FCB1F94F /* NetShisa */,
+				B9C2750750EEDA46654164D4 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		E823ACB54E62E5AE7FA70897 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				8B84AFFAB9F17FF33B9AAD6A /* DashboardView.swift */,
+				438271C6BB7F925922BC64A2 /* DetailWindow.swift */,
+				FE1E7F1CF8FF57959D27B6FB /* DNSDetailView.swift */,
+				E0A75FC5371C4CA536F3ED51 /* ICMPView.swift */,
+				C06F320D784905616AF19FFC /* IncidentListView.swift */,
+				0E353D453E8BDA390D01695C /* NetworkDetailView.swift */,
+				65780D04C07A747968BDC014 /* SettingsView.swift */,
+				3BE9F28992952182921B4230 /* TimelineView.swift */,
+				50E0CCDD790C568408075DAC /* WiFiView.swift */,
+				4C53F0A7DD75A58C3F1EE400 /* Components */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		F39D93B169A3359AC7140811 /* Remediation */ = {
+			isa = PBXGroup;
+			children = (
+				FBAF0FE0EB6B4AE745EB49C2 /* RemediationEngine.swift */,
+			);
+			path = Remediation;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		737CD092056288B387280404 /* NetShisa */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E5612399D4546C9FC6F2F1EF /* Build configuration list for PBXNativeTarget "NetShisa" */;
+			buildPhases = (
+				7BF494EE92A30D9B6A81F115 /* Sources */,
+				B5E17F18EB9060AC41449B9D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NetShisa;
+			packageProductDependencies = (
+			);
+			productName = NetShisa;
+			productReference = 1685550C0019081037126C5D /* NetShisa.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0D9AA345876C41DFC1FE5EFB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1600;
+				TargetAttributes = {
+				};
+			};
+			buildConfigurationList = CFE9CCA1E346A6EF23DEDA5D /* Build configuration list for PBXProject "NetShisa" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = D366A8376E38961CB8F11712;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = B9C2750750EEDA46654164D4 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				737CD092056288B387280404 /* NetShisa */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B5E17F18EB9060AC41449B9D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6E5B99415C1AA1D6C85ABCE9 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7BF494EE92A30D9B6A81F115 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7CEFF6DB113175FC27543D7C /* AppDelegate.swift in Sources */,
+				DEB22EDA582C12A5490E8058 /* AppState.swift in Sources */,
+				5881C18E40C60870ECD35CD7 /* ConnectivitySnapshot.swift in Sources */,
+				78530C45846357BB12CD31EB /* ConnectivityState.swift in Sources */,
+				CDA61C82991B836F146EC7DB /* DNSDetailView.swift in Sources */,
+				52CB118ECE7574AC0F449D6F /* DNSProbe.swift in Sources */,
+				31CD87CCD79D7E1A79063BBD /* DNSResult.swift in Sources */,
+				779E5AF6ECD50CB3F0C721C8 /* DashboardView.swift in Sources */,
+				E92B91E65CC1241E55680163 /* DetailWindow.swift in Sources */,
+				216A166FE1EEB608743A9D7D /* DualStackMonitor.swift in Sources */,
+				61D1F217EACE0C1CCAAA0E1C /* GatewayProbe.swift in Sources */,
+				AC5F848274DAFA03E159E74E /* ICMPView.swift in Sources */,
+				2A99E9DA7B6E9BA58525B75E /* Incident.swift in Sources */,
+				AAF7CD26B98400EE9E37ADB3 /* IncidentDetector.swift in Sources */,
+				82072987455248A8789A08EC /* IncidentListView.swift in Sources */,
+				097D2CCF2E1A00F5B5E68E29 /* NetShisaApp.swift in Sources */,
+				459E2668DBBED6ECDD8D1672 /* NetworkDetailProbe.swift in Sources */,
+				36D9C03D15E1FA0B597E2076 /* NetworkDetailView.swift in Sources */,
+				C1653CE353BC2415E9099430 /* NotificationManager.swift in Sources */,
+				C8CD4B026F689DAE690F5B29 /* PopoverView.swift in Sources */,
+				0182309E41AE408D646F06C1 /* ProbeScheduler.swift in Sources */,
+				78DE965C78E6EE7C47529DDC /* RemediationEngine.swift in Sources */,
+				DFD257F82C325D3C6233A672 /* ServiceDefinition.swift in Sources */,
+				1C5BC151CD1F47D80C89300C /* ServiceProbe.swift in Sources */,
+				7BDCA2C5A942CEB06C6D51DC /* ServiceResult.swift in Sources */,
+				9DC72E9C4D4429CAE841786B /* ServiceRow.swift in Sources */,
+				2FD1E6B42D642FAF54DCD00A /* SettingsView.swift in Sources */,
+				993359F8FA99C56315CF9EDE /* StatusBarController.swift in Sources */,
+				E45F07786DF10E8E0EC6E77B /* StatusIndicator.swift in Sources */,
+				433505B17267C6266A9F9C2B /* TimelineView.swift in Sources */,
+				EBF6FA089DF9EE21AC5CD27A /* TracerouteEngine.swift in Sources */,
+				FDEB3C9C0C90823439A465C2 /* TracerouteResult.swift in Sources */,
+				70079CCF25E303E00C937AE6 /* WiFiProbe.swift in Sources */,
+				1C544BE6770E036A149EBE78 /* WiFiView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		4208FFC3C13C0631494CF86D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.10;
+			};
+			name = Debug;
+		};
+		7FCF13B23EC8AE33CED1AECB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = NetShisa/NetShisa.entitlements;
+				COMBINE_HIDPI_IMAGES = YES;
+				ENABLE_APP_SANDBOX = NO;
+				INFOPLIST_FILE = NetShisa/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.netshisa.app;
+				PRODUCT_NAME = NetShisa;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		DD96C31049A270AEEF528DB3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.10;
+			};
+			name = Release;
+		};
+		EE67D09363B544B6D8BB1ED1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = NetShisa/NetShisa.entitlements;
+				COMBINE_HIDPI_IMAGES = YES;
+				ENABLE_APP_SANDBOX = NO;
+				INFOPLIST_FILE = NetShisa/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.netshisa.app;
+				PRODUCT_NAME = NetShisa;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CFE9CCA1E346A6EF23DEDA5D /* Build configuration list for PBXProject "NetShisa" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4208FFC3C13C0631494CF86D /* Debug */,
+				DD96C31049A270AEEF528DB3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		E5612399D4546C9FC6F2F1EF /* Build configuration list for PBXNativeTarget "NetShisa" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7FCF13B23EC8AE33CED1AECB /* Debug */,
+				EE67D09363B544B6D8BB1ED1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0D9AA345876C41DFC1FE5EFB /* Project object */;
+}

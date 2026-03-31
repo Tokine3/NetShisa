@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>LSUIElement</key>
+	<true/>
+	<key>NSSupportsAutomaticTermination</key>
+	<false/>
+	<key>NSSupportsSuddenTermination</key>
+	<false/>
+	<key>CFBundleName</key>
+	<string>NetShisa</string>
+	<key>CFBundleDisplayName</key>
+	<string>NetShisa</string>
+	<key>CFBundleIdentifier</key>
+	<string>com.netshisa.app</string>
+	<key>CFBundleVersion</key>
+	<string>1</string>
+	<key>CFBundleShortVersionString</key>
+	<string>1.0.0</string>
+	<key>CFBundlePackageType</key>
+	<string>APPL</string>
+	<key>CFBundleExecutable</key>
+	<string>NetShisa</string>
+	<key>LSMinimumSystemVersion</key>
+	<string>14.0</string>
+	<key>NSLocationUsageDescription</key>
+	<string>Wi-Fi の SSID を取得するために位置情報の許可が必要です。</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>Wi-Fi の SSID を取得するために位置情報の許可が必要です。</string>
+</dict>
+</plist>

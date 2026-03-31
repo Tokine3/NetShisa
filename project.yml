@@ -1,0 +1,31 @@
+name: NetShisa
+options:
+  bundleIdPrefix: com.netshisa
+  deploymentTarget:
+    macOS: "14.0"
+  xcodeVersion: "16.0"
+  minimumXcodeGenVersion: "2.38"
+
+settings:
+  base:
+    SWIFT_VERSION: "5.10"
+    MACOSX_DEPLOYMENT_TARGET: "14.0"
+
+targets:
+  NetShisa:
+    type: application
+    platform: macOS
+    sources:
+      - NetShisa
+    settings:
+      base:
+        INFOPLIST_FILE: NetShisa/Info.plist
+        CODE_SIGN_ENTITLEMENTS: NetShisa/NetShisa.entitlements
+        PRODUCT_BUNDLE_IDENTIFIER: com.netshisa.app
+        PRODUCT_NAME: NetShisa
+        COMBINE_HIDPI_IMAGES: YES
+        LD_RUNPATH_SEARCH_PATHS:
+          - $(inherited)
+          - "@executable_path/../Frameworks"
+        ENABLE_APP_SANDBOX: NO
+        ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
