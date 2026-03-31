@@ -53,6 +53,9 @@ final class AppState: ObservableObject {
     /// グローバルIP取得タスクの参照（重複実行防止）
     private var globalIPTask: Task<Void, Never>?
 
+    /// スナップショット保存用の共有コンテキスト（毎回生成を避ける）
+    private lazy var persistenceContext: ModelContext = ModelContext(modelContainer)
+
     init(modelContainer: ModelContainer) {
         self.modelContainer = modelContainer
         self.dualStackMonitor = DualStackMonitor()
@@ -197,9 +200,8 @@ final class AppState: ObservableObject {
                 )
                 currentIncident = incident
                 probeScheduler.enterIncidentMode()
-                let context = ModelContext(modelContainer)
-                context.insert(incident)
-                try? context.save()
+                persistenceContext.insert(incident)
+                try? persistenceContext.save()
 
                 NotificationManager.shared.sendIncidentNotification(classification: classification)
             }
@@ -208,8 +210,7 @@ final class AppState: ObservableObject {
             currentIncident = nil
             probeScheduler.exitIncidentMode()
 
-            let context = ModelContext(modelContainer)
-            try? context.save()
+            try? persistenceContext.save()
         }
 
         // Save snapshot
@@ -236,7 +237,7 @@ final class AppState: ObservableObject {
     private var lastCleanupDate: Date?
 
     private func saveSnapshot() {
-        let context = ModelContext(modelContainer)
+        let context = persistenceContext
 
         let snapshot = ConnectivitySnapshot(
             timestamp: Date(),
@@ -253,14 +254,15 @@ final class AppState: ObservableObject {
         let now = Date()
         if lastCleanupDate == nil || now.timeIntervalSince(lastCleanupDate!) > 86400 {
             lastCleanupDate = now
-            pruneOldData(context: context)
+            pruneOldData()
         }
 
         try? context.save()
     }
 
     /// 古いスナップショット（7日超）とインシデント（90日超）を削除
-    private func pruneOldData(context: ModelContext) {
+    private func pruneOldData() {
+        let context = persistenceContext
         let snapshotCutoff = Date().addingTimeInterval(-7 * 86400)
         let incidentCutoff = Date().addingTimeInterval(-90 * 86400)
 

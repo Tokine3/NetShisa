@@ -115,18 +115,21 @@ final class ServiceProbe: @unchecked Sendable {
             let start = DispatchTime.now()
             var resumed = false
 
-            connection.stateUpdateHandler = { state in
+            func finish(_ result: ProbeResult) {
                 guard !resumed else { return }
+                resumed = true
+                connection.stateUpdateHandler = nil
+                connection.cancel()
+                continuation.resume(returning: result)
+            }
+
+            connection.stateUpdateHandler = { state in
                 switch state {
                 case .ready:
-                    resumed = true
                     let elapsed = Double(DispatchTime.now().uptimeNanoseconds - start.uptimeNanoseconds) / 1_000_000
-                    connection.cancel()
-                    continuation.resume(returning: ProbeResult(reachable: true, latencyMs: elapsed))
+                    finish(ProbeResult(reachable: true, latencyMs: elapsed))
                 case .failed, .cancelled:
-                    resumed = true
-                    connection.cancel()
-                    continuation.resume(returning: ProbeResult(reachable: false, latencyMs: nil))
+                    finish(ProbeResult(reachable: false, latencyMs: nil))
                 default:
                     break
                 }
@@ -134,10 +137,7 @@ final class ServiceProbe: @unchecked Sendable {
             connection.start(queue: self.queue)
 
             self.queue.asyncAfter(deadline: .now() + 5) {
-                guard !resumed else { return }
-                resumed = true
-                connection.cancel()
-                continuation.resume(returning: ProbeResult(reachable: false, latencyMs: nil))
+                finish(ProbeResult(reachable: false, latencyMs: nil))
             }
         }
     }

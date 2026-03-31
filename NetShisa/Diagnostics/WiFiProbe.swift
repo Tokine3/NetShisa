@@ -278,7 +278,7 @@ final class WiFiProbe: NSObject, @unchecked Sendable, CLLocationManagerDelegate 
 
     /// system_profiler から Noise を取得
     private func getNoiseFromSystemProfiler() -> Int? {
-        let output = runSync("/usr/sbin/system_profiler", arguments: ["SPAirPortDataType"])
+        let output = runSync("/usr/sbin/system_profiler", arguments: ["SPAirPortDataType"], timeout: 15)
         for line in output.components(separatedBy: "\n") {
             let trimmed = line.trimmingCharacters(in: .whitespaces)
             // "Signal / Noise: -55 dBm / -76 dBm"
@@ -370,7 +370,7 @@ final class WiFiProbe: NSObject, @unchecked Sendable, CLLocationManagerDelegate 
         }
     }
 
-    private func runSync(_ path: String, arguments: [String]) -> String {
+    private func runSync(_ path: String, arguments: [String], timeout: TimeInterval = 10) -> String {
         let process = Process()
         process.executableURL = URL(fileURLWithPath: path)
         process.arguments = arguments
@@ -379,7 +379,19 @@ final class WiFiProbe: NSObject, @unchecked Sendable, CLLocationManagerDelegate 
         process.standardError = Pipe()
         do {
             try process.run()
-            process.waitUntilExit()
+
+            // タイムアウト付きで完了を待つ（ハング防止）
+            let deadline = DispatchTime.now() + timeout
+            let done = DispatchSemaphore(value: 0)
+            DispatchQueue.global().async {
+                process.waitUntilExit()
+                done.signal()
+            }
+            if done.wait(timeout: deadline) == .timedOut {
+                process.terminate()
+                return ""
+            }
+
             let data = pipe.fileHandleForReading.readDataToEndOfFile()
             return String(data: data, encoding: .utf8) ?? ""
         } catch {

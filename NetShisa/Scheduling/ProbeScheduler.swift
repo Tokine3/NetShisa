@@ -4,6 +4,8 @@ final class ProbeScheduler: @unchecked Sendable {
     private var timer: Timer?
     private var probeAction: (() async -> Void)?
     private var isIncidentMode = false
+    /// プローブ実行中フラグ（並列実行を防止）
+    private var isRunning = false
 
     private var normalInterval: TimeInterval = 60
     private var incidentInterval: TimeInterval = 30
@@ -47,9 +49,13 @@ final class ProbeScheduler: @unchecked Sendable {
         timer?.invalidate()
         DispatchQueue.main.async { [weak self] in
             self?.timer = Timer.scheduledTimer(withTimeInterval: interval, repeats: true) { [weak self] _ in
-                guard let action = self?.probeAction else { return }
+                guard let self, let action = self.probeAction else { return }
+                // 前回のプローブがまだ実行中ならスキップ
+                guard !self.isRunning else { return }
+                self.isRunning = true
                 Task {
                     await action()
+                    await MainActor.run { self.isRunning = false }
                 }
             }
         }
