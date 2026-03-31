@@ -135,6 +135,17 @@ struct SettingsView: View {
                             .padding(.top, 2)
                     }
                 }
+                #if DEBUG
+                // デモモード（DEBUGビルド限定）
+                settingsSection("開発者オプション") {
+                    VStack(alignment: .leading, spacing: 8) {
+                        Toggle("スクリーンショット用デモ表示", isOn: $appState.isDemoMode)
+                        Text("SSID・IPアドレス・MACアドレスなどの個人情報をダミーデータに置き換えます。スクリーンショット撮影時にご利用ください。")
+                            .font(.system(size: 9))
+                            .foregroundColor(.secondary)
+                    }
+                }
+                #endif
             }
             .padding(24)
         }

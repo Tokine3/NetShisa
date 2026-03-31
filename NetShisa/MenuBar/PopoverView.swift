@@ -42,7 +42,7 @@ struct PopoverView: View {
                             Divider().opacity(0.3)
 
                             // Local IP
-                            if let localIP = appState.localIPv4 {
+                            if let localIP = appState.displayLocalIPv4 {
                                 HStack(spacing: 8) {
                                     Image(systemName: "laptopcomputer")
                                         .font(.system(size: 9))
@@ -62,7 +62,7 @@ struct PopoverView: View {
                                 StatusIndicator(reachable: appState.gatewayReachable)
                                 Text("Gateway")
                                     .font(.system(size: 11, weight: .medium, design: .monospaced))
-                                if let gw = appState.gatewayIPv4 {
+                                if let gw = appState.displayGatewayIPv4 {
                                     Text(gw)
                                         .font(.system(size: 10, design: .monospaced))
                                         .foregroundColor(.secondary)
@@ -182,16 +182,16 @@ struct PopoverView: View {
                 .font(.system(.headline, design: .rounded))
 
             // Wi-Fi / 接続情報をタイトル横に
-            Image(systemName: appState.wifiInfo.isWiFiConnected ? "wifi" : (appState.wifiInfo.isEthernet ? "cable.connector" : "wifi.slash"))
+            Image(systemName: appState.displayWifiInfo.isWiFiConnected ? "wifi" : (appState.displayWifiInfo.isEthernet ? "cable.connector" : "wifi.slash"))
                 .font(.system(size: 10))
                 .foregroundColor(.secondary)
-            Text(appState.wifiInfo.summaryText)
+            Text(appState.displayWifiInfo.summaryText)
                 .font(.system(size: 10, weight: .medium))
                 .foregroundColor(.secondary)
                 .lineLimit(1)
 
-            if let rssi = appState.wifiInfo.rssi {
-                signalBars(appState.wifiInfo.signalBars)
+            if let rssi = appState.displayWifiInfo.rssi {
+                signalBars(appState.displayWifiInfo.signalBars)
                 Text("\(rssi)dBm")
                     .font(.system(size: 9, design: .monospaced))
                     .foregroundColor(.secondary)

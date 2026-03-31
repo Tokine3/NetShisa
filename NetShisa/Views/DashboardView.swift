@@ -66,20 +66,20 @@ struct DashboardView: View {
                         RoundedRectangle(cornerRadius: 8)
                             .fill(Color.accentColor.opacity(0.1))
                             .frame(width: 36, height: 36)
-                        Image(systemName: appState.wifiInfo.isWiFiConnected ? "wifi" : (appState.wifiInfo.isEthernet ? "cable.connector" : "wifi.slash"))
+                        Image(systemName: appState.displayWifiInfo.isWiFiConnected ? "wifi" : (appState.displayWifiInfo.isEthernet ? "cable.connector" : "wifi.slash"))
                             .font(.system(size: 15))
                             .foregroundColor(.accentColor)
                     }
                     VStack(alignment: .leading, spacing: 2) {
-                        Text(appState.wifiInfo.summaryText)
+                        Text(appState.displayWifiInfo.summaryText)
                             .font(.system(size: 12, weight: .semibold))
                             .lineLimit(1)
                         HStack(spacing: 6) {
-                            if let rssi = appState.wifiInfo.rssi {
+                            if let rssi = appState.displayWifiInfo.rssi {
                                 Text("\(rssi) dBm")
-                                    .foregroundColor(signalQualityColor(appState.wifiInfo.signalBars))
+                                    .foregroundColor(signalQualityColor(appState.displayWifiInfo.signalBars))
                             }
-                            if let mode = appState.wifiInfo.phyMode {
+                            if let mode = appState.displayWifiInfo.phyMode {
                                 badge(mode, color: .blue)
                             }
                         }
@@ -95,11 +95,11 @@ struct DashboardView: View {
                           value: appState.connectionType != .unknown ? appState.connectionType.rawValue : "検出中...",
                           dimValue: appState.connectionType == .unknown)
 
-                if let gw = appState.gatewayIPv4 {
+                if let gw = appState.displayGatewayIPv4 {
                     metricRow(icon: "arrow.triangle.branch", label: "Gateway", value: gw)
                 }
 
-                if let localIP = appState.localIPv4 {
+                if let localIP = appState.displayLocalIPv4 {
                     metricRow(icon: "laptopcomputer", label: "Local IP", value: localIP)
                 }
 
@@ -149,10 +149,10 @@ struct DashboardView: View {
                 }
 
                 // Global IP
-                if let gv4 = appState.globalIPv4 {
+                if let gv4 = appState.displayGlobalIPv4 {
                     Divider().opacity(0.2)
                     metricRow(icon: "globe", label: "Global IP", value: gv4)
-                    if let gv6 = appState.globalIPv6 {
+                    if let gv6 = appState.displayGlobalIPv6 {
                         metricRow(icon: "globe", label: "Global v6", value: gv6)
                     }
                 }

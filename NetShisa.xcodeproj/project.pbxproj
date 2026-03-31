@@ -42,6 +42,7 @@
 		E92B91E65CC1241E55680163 /* DetailWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 438271C6BB7F925922BC64A2 /* DetailWindow.swift */; };
 		EBF6FA089DF9EE21AC5CD27A /* TracerouteEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D0F446A49062ED730DA36F /* TracerouteEngine.swift */; };
 		FDEB3C9C0C90823439A465C2 /* TracerouteResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = A09B2946AFFD082B59DB406C /* TracerouteResult.swift */; };
+		AA1234560001000000000001 /* DemoData.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA1234560001000000000002 /* DemoData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -78,6 +79,7 @@
 		C1FAC19A8BFD49C0F0A614F3 /* ServiceRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceRow.swift; sourceTree = "<group>"; };
 		CBC1B6B16441936E103A800E /* DNSResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DNSResult.swift; sourceTree = "<group>"; };
 		D051461708A85AC044A4EDD2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		AA1234560001000000000002 /* DemoData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoData.swift; sourceTree = "<group>"; };
 		D570ADFA4A09506FF328727F /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
 		E0A75FC5371C4CA536F3ED51 /* ICMPView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ICMPView.swift; sourceTree = "<group>"; };
 		F3548CA732DE78BE328BEF25 /* DNSProbe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DNSProbe.swift; sourceTree = "<group>"; };
@@ -148,6 +150,7 @@
 			children = (
 				B9708E0783414240BF87169D /* AppDelegate.swift */,
 				D570ADFA4A09506FF328727F /* AppState.swift */,
+				AA1234560001000000000002 /* DemoData.swift */,
 				8698D206EFBAE116022F3BA5 /* NetShisaApp.swift */,
 			);
 			path = App;
@@ -295,6 +298,7 @@
 			files = (
 				7CEFF6DB113175FC27543D7C /* AppDelegate.swift in Sources */,
 				DEB22EDA582C12A5490E8058 /* AppState.swift in Sources */,
+				AA1234560001000000000001 /* DemoData.swift in Sources */,
 				5881C18E40C60870ECD35CD7 /* ConnectivitySnapshot.swift in Sources */,
 				78530C45846357BB12CD31EB /* ConnectivityState.swift in Sources */,
 				CDA61C82991B836F146EC7DB /* DNSDetailView.swift in Sources */,

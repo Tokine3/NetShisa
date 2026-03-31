@@ -28,7 +28,7 @@ struct WiFiView: View {
                     .controlSize(.regular)
                 }
 
-                let info = appState.wifiInfo
+                let info = appState.displayWifiInfo
 
                 if !info.isWiFiConnected && !info.isEthernet {
                     notConnectedView

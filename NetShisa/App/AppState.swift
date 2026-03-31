@@ -44,6 +44,10 @@ final class AppState: ObservableObject {
     @Published var connectionStartTime: Date?
     @Published var rssiHistory: [(date: Date, rssi: Int)] = []
 
+    #if DEBUG
+    @Published var isDemoMode: Bool = false
+    #endif
+
     private let maxRSSIHistory = 60
 
     /// グローバルIP取得タスクの参照（重複実行防止）
@@ -311,6 +315,28 @@ final class AppState: ObservableObject {
             return nil
         }
     }
+}
+
+// MARK: - デモモード表示用プロパティ
+
+extension AppState {
+    #if DEBUG
+    var displayLocalIPv4: String? { isDemoMode ? DemoData.localIPv4 : localIPv4 }
+    var displayGatewayIPv4: String? { isDemoMode ? DemoData.gatewayIPv4 : gatewayIPv4 }
+    var displayGatewayIPv6: String? { isDemoMode ? (gatewayIPv6 != nil ? DemoData.gatewayIPv6 : nil) : gatewayIPv6 }
+    var displayGlobalIPv4: String? { isDemoMode ? DemoData.globalIPv4 : globalIPv4 }
+    var displayGlobalIPv6: String? { isDemoMode ? (globalIPv6 != nil ? DemoData.globalIPv6 : nil) : globalIPv6 }
+    var displayWifiInfo: WiFiInfo { isDemoMode ? DemoData.mask(wifiInfo) : wifiInfo }
+    var displayNetworkDetail: NetworkDetail { isDemoMode ? DemoData.mask(networkDetail) : networkDetail }
+    #else
+    var displayLocalIPv4: String? { localIPv4 }
+    var displayGatewayIPv4: String? { gatewayIPv4 }
+    var displayGatewayIPv6: String? { gatewayIPv6 }
+    var displayGlobalIPv4: String? { globalIPv4 }
+    var displayGlobalIPv6: String? { globalIPv6 }
+    var displayWifiInfo: WiFiInfo { wifiInfo }
+    var displayNetworkDetail: NetworkDetail { networkDetail }
+    #endif
 }
 
 enum OverallStatus: String {

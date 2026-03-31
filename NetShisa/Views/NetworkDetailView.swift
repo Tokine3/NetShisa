@@ -81,7 +81,7 @@ struct NetworkDetailView: View {
             } else {
                 ScrollView {
                     VStack(alignment: .leading, spacing: 16) {
-                        let detail = appState.networkDetail
+                        let detail = appState.displayNetworkDetail
 
                         // SSID / 接続情報
                         if let ssid = detail.ssid {
@@ -136,16 +136,16 @@ struct NetworkDetailView: View {
                         .font(.system(size: 10, weight: .bold))
                         .foregroundColor(.blue)
                         .frame(width: 35, alignment: .trailing)
-                    monoText(appState.globalIPv4 ?? "取得中...")
-                        .foregroundColor(appState.globalIPv4 != nil ? .primary : .secondary)
+                    monoText(appState.displayGlobalIPv4 ?? "取得中...")
+                        .foregroundColor(appState.displayGlobalIPv4 != nil ? .primary : .secondary)
                 }
                 HStack(spacing: 8) {
                     Text("IPv6")
                         .font(.system(size: 10, weight: .bold))
                         .foregroundColor(.purple)
                         .frame(width: 35, alignment: .trailing)
-                    monoText(appState.globalIPv6 ?? "なし")
-                        .foregroundColor(appState.globalIPv6 != nil ? .primary : .secondary)
+                    monoText(appState.displayGlobalIPv6 ?? "なし")
+                        .foregroundColor(appState.displayGlobalIPv6 != nil ? .primary : .secondary)
                 }
             }
         }
