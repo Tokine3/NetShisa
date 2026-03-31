@@ -1,6 +1,13 @@
-# NetShisa
+<p align="center">
+  <img src="NetShisa/Resources/Assets.xcassets/AppIcon.appiconset/icon_256x256.png" width="120" alt="NetShisa" />
+</p>
 
-macOS ネットワーク診断・監視ツール。IPv4 / IPv6 のデュアルスタック接続状態をリアルタイムに監視し、障害の原因特定と修復を支援します。
+<h1 align="center">NetShisa</h1>
+
+<p align="center">
+  macOS ネットワーク診断・監視ツール<br />
+  IPv4 / IPv6 のデュアルスタック接続状態をリアルタイムに監視し、障害の原因特定と修復を支援します。
+</p>
 
 ## 特徴
 
